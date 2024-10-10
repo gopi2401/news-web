@@ -1,5 +1,7 @@
 # News Website
 
+## Introduction
+
 A simple news website built with React that fetches and displays real-time news headlines using the NewsAPI. This project demonstrates how to integrate external APIs, manage state, and navigate between different pages in a React application.
 
 ## Features
@@ -17,7 +19,10 @@ You can view a live demo of the project here: [Live Demo Link](https://gopi2401.
 
 ## Table of Contents
 
+- [Introduction](#introduction)
+- [Features](#features)
 - [Installation](#installation)
+- [Dependencies](#dependencies)
 - [Usage](#usage)
 - [API Integration](#api-integration)
 - [Folder Structure](#folder-structure)
@@ -28,8 +33,8 @@ You can view a live demo of the project here: [Live Demo Link](https://gopi2401.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/gopi2401/news-website.git
-   cd news-website
+   git clone https://github.com/gopi2401/news-web.git
+   cd news-web
    ```
 2. Install dependencies:
    ```bash
@@ -45,6 +50,28 @@ You can view a live demo of the project here: [Live Demo Link](https://gopi2401.
    npm start
    ```
 6. Open your browser and go to http://localhost:3000/news-web to view the website.
+
+## Dependencies
+
+The project uses the following key dependencies:
+
+| Dependency           | Description                                                                                                    | Version   |
+| -------------------- | -------------------------------------------------------------------------------------------------------------- | --------- |
+| **React**            | A JavaScript library for building user interfaces. [React Docs](https://reactjs.org/docs/getting-started.html) | `^18.3.1` |
+| **React-DOM**        | Provides DOM-specific methods for React.                                                                       | `^18.3.1` |
+| **React-Router-DOM** | Declarative routing for React applications.                                                                    | `^6.26.2` |
+| **React-Scripts**    | Provides the scripts and configuration used by Create React App.                                               | `5.0.1`   |
+| **Web-Vitals**       | Helps measure and report Core Web Vitals metrics.                                                              | `^2.1.4`  |
+
+### DevDependencies
+
+These are the development dependencies for the project:
+
+| DevDependency   | Description                                            | Version   |
+| --------------- | ------------------------------------------------------ | --------- |
+| **ajv**         | A JSON schema validator for modern applications.       | `^7.2.4`  |
+| **gh-pages**    | A package for easily deploying to GitHub Pages.        | `^6.1.1`  |
+| **TailwindCSS** | A utility-first CSS framework for fast UI development. | `^3.4.13` |
 
 ## Usage
 
@@ -107,14 +134,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 1. **Project Overview**: Provides a brief introduction and features list.
 2. **Installation**: Guides users through the steps to run the project locally.
-3. **API Integration**: Explains how the API is used in the project.
-4. **Usage**: Describes the main functionalities of the application.
-5. **Folder Structure**: Gives a quick overview of how the code is organized.
-6. **Contributing**: Instructions for contributing to the project.
-7. **License**: Specifies the license (MIT in this case).
+3. **Dependencies**: The project uses the following key dependencies.
+4. **API Integration**: Explains how the API is used in the project.
+5. **Usage**: Describes the main functionalities of the application.
+6. **Folder Structure**: Gives a quick overview of how the code is organized.
+7. **Contributing**: Instructions for contributing to the project.
+8. **License**: Specifies the license (MIT in this case).
 
 You can adjust the sections based on additional features or unique elements in your project. Let me know if you'd like more customization or have specific sections you'd like to include!
-
-```
-
-```

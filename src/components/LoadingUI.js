@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataContext } from '../utils/data';
+import { DataContext } from '../utils/DataProvider';
 
 
 function LoadingUI() {
