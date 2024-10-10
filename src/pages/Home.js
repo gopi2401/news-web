@@ -278,7 +278,7 @@ const d = [
     }
 ]
 function Home() {
-    const { loading, MsgLoad } = React.useContext(DataContext);
+    const { loading } = React.useContext(DataContext);
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
@@ -305,7 +305,7 @@ function Home() {
             loading.setLoading(false);
         }, 1000)
 
-    }, []);
+    });
 
 
     return (

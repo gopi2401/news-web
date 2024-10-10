@@ -7,11 +7,11 @@ function Message() {
     const close = () => MsgLoad.setMsg({ load: false, message: '' });
     useEffect(() => {
         const timer = setTimeout(() => {
-            close()
+            close();
         }, 5000);
 
         return () => clearTimeout(timer);
-    }, []);
+    });
     return (
         <>
             {MsgLoad.msg.load && <div className="fixed top-0 right-0 left-0 z-50">

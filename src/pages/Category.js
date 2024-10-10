@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import NewsCard from '../components/NewsCard';
 import { DataContext } from '../utils/data';
 import Pagination from '../components/Pagination';
 import Skeleton from '../components/skeleton';
@@ -29,7 +28,7 @@ function Category() {
     };
 
     fetchCategoryNews();
-  }, [category]);
+  });
 
   return (
     <div className='w-full flex flex-col items-center min-h-[calc(100vh-300px)]'>

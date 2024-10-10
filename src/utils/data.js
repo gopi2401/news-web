@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const DataContext = React.createContext(null)
 
-export default ({ children }) => {
+function DataProvider({ children }) {
 
-    const [loading, setLoading] = React.useState(false);
-    const [msg, setMsg] = React.useState({
+    const [loading, setLoading] = useState(false);
+    const [msg, setMsg] = useState({
         load: false, message: ''
     });
 
@@ -17,3 +17,4 @@ export default ({ children }) => {
 
     return <DataContext.Provider value={data}>{children}</DataContext.Provider>
 }
+export default DataProvider;
