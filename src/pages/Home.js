@@ -278,7 +278,7 @@ const d = [
     }
 ]
 function Home() {
-    const { loading } = React.useContext(DataContext);
+    const { loading, MsgLoad } = React.useContext(DataContext);
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
