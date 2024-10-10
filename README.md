@@ -13,7 +13,7 @@ A simple news website built with React that fetches and displays real-time news 
 
 ## Demo
 
-You can view a live demo of the project here: [Live Demo Link](#) _(replace with actual link if hosted)_
+You can view a live demo of the project here: [Live Demo Link](https://gopi2401.github.io/news-web)
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ You can view a live demo of the project here: [Live Demo Link](#) _(replace with
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/news-website.git
+   git clone https://github.com/gopi2401/news-website.git
    cd news-website
    ```
 2. Install dependencies:
@@ -44,7 +44,7 @@ You can view a live demo of the project here: [Live Demo Link](#) _(replace with
    ```bash
    npm start
    ```
-6. Open your browser and go to http://localhost:3000 to view the website.
+6. Open your browser and go to http://localhost:3000/news-web to view the website.
 
 ## Usage
 
@@ -82,11 +82,12 @@ https://newsapi.org/v2/top-headlines?country=us&apiKey=your_api_key
 
 ```bash
 src/
-  ├── components/        # Reusable components like Navbar, NewsCard
+  ├── components/        # Reusable components like Navbar, NewsCard and etc.
   ├── pages/             # Page components like Home, Category, SearchResults
+  ├── utils/             # Global data store like DataProvider
   ├── App.js             # Main app component with routing
+  ├── index.css          # Global styles
   ├── index.js           # Entry point
-  ├── App.css            # Global styles
   └── .env               # Environment variables (API Key)
 ```
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { DataContext } from '../utils/data';
+import { DataContext } from '../utils/DataProvider';
 import Pagination from '../components/Pagination';
 import Skeleton from '../components/skeleton';
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { DataContext } from '../utils/data';
+import { DataContext } from '../utils/DataProvider';
 
 
 function Message() {

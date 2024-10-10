@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { DataContext } from '../utils/data';
+import { DataContext } from '../utils/DataProvider';
 import Pagination from '../components/Pagination';
 import Skeleton from '../components/skeleton';
 
@@ -30,7 +30,7 @@ function Home() {
         //     setArticles(d);
         //     loading.setLoading(false);
         // }, 1000)
-    });
+    },[]);
 
 
     return (
