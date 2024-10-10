@@ -7,12 +7,12 @@ import SearchResults from './pages/SearchResults';
 // import LoadingUI from './components/LoadingUI';
 import Footer from './components/footer';
 import Message from './components/message';
-
+const { homepage } = require('../package.json');
 
 
 function App() {
   return (
-    <Router>
+    <Router basename={homepage}>
       {/* <LoadingUI /> */}
       <Navbar />
       <Routes>
