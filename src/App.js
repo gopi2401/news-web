@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Category from './pages/Category';
 import SearchResults from './pages/SearchResults';
-import LoadingUI from './components/LoadingUI';
+// import LoadingUI from './components/LoadingUI';
 import Footer from './components/footer';
 import Message from './components/message';
 
@@ -13,7 +13,7 @@ import Message from './components/message';
 function App() {
   return (
     <Router>
-      <LoadingUI />
+      {/* <LoadingUI /> */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

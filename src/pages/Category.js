@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import NewsCard from '../components/NewsCard';
 import { DataContext } from '../utils/data';
 import Pagination from '../components/Pagination';
+import Skeleton from '../components/skeleton';
 
 function Category() {
   const { category } = useParams();
@@ -17,7 +18,7 @@ function Category() {
         const data = await response.json();
         if (data.status === 'error') { MsgLoad.setMsg({ load: true, message: data.message }) } else {
           setArticles(data.articles.filter(
-            (item) => item.title != "[Removed]"
+            (item) => item.title !== "[Removed]"
           ));
         }
         loading.setLoading(false);
@@ -36,11 +37,11 @@ function Category() {
         <span className='text-red-600'>{category ? category.charAt(0).toUpperCase() + category.slice(1) : 'Top'}</span> News
       </h1>
       <div className='flex-auto flex justify-center items-center '>
-        {articles && articles.length > 0 ? (
+        {!loading.loading ? (articles && articles.length > 0 ? (
           <Pagination articles={articles} ></Pagination>
         ) : (
           <h1 className='text-center text-gray-500'>No articles available at the moment.</h1>
-        )}
+        )) : (<Skeleton />)}
       </div>
     </div >
 

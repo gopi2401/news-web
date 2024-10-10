@@ -4,7 +4,6 @@ import { DataContext } from '../utils/data';
 
 function LoadingUI() {
     const { loading } = React.useContext(DataContext)
-    console.log(loading.loading)
     return (
         <>
             {loading.loading && <div className="fixed bg-black/60 top-0 right-0 left-0 z-50">
