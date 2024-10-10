@@ -17,7 +17,8 @@ function Navbar() {
       <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
         <a href="/"
           className="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold">
-          <span className='text-red-600'>News</span> Web
+          {/* <span className='text-red-600'>News</span> Web */}
+          <img className='rounded-full w-10' src='logo-1.png' />
         </a>
         <div className="relative hidden lg:block">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
