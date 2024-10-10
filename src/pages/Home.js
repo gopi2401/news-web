@@ -282,29 +282,28 @@ function Home() {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-        // const fetchTopHeadlines = async () => {
-        //     try {
-        //         loading.setLoading(true);
-        //         const response = await fetch(`https://newsapi.org/v2/top-headlines?country=${process.env.REACT_APP_COUNTRY}&apiKey=${process.env.REACT_APP_API_KEY}`);
-        //         const data = await response.json();
-        //         if (data.status === 'error') { MsgLoad.setMsg({ load: true, message: data.message }) } else {
-        //             setArticles(data.articles.filter(
-        //                 (item) => item.title !== "[Removed]"
-        //             ));
-        //         }
-        //         loading.setLoading(false);
-        //     } catch (error) {
-        //         loading.setLoading(false);
-        //         MsgLoad.setMsg({ load: true, message: 'Failed to fetch' })
-        //     }
-        // };
-        // fetchTopHeadlines();
-        loading.setLoading(true);
-        setTimeout(() => {
-            setArticles(d);
-            loading.setLoading(false);
-        }, 1000)
-
+        const fetchTopHeadlines = async () => {
+            try {
+                loading.setLoading(true);
+                const response = await fetch(`https://newsapi.org/v2/top-headlines?apiKey=${process.env.REACT_APP_API_KEY}`);
+                const data = await response.json();
+                if (data.status === 'error') { MsgLoad.setMsg({ load: true, message: data.message }) } else {
+                    setArticles(data.articles.filter(
+                        (item) => item.title !== "[Removed]"
+                    ));
+                }
+                loading.setLoading(false);
+            } catch (error) {
+                loading.setLoading(false);
+                MsgLoad.setMsg({ load: true, message: 'Failed to fetch' })
+            }
+        };
+        fetchTopHeadlines();
+        // loading.setLoading(true);
+        // setTimeout(() => {
+        //     setArticles(d);
+        //     loading.setLoading(false);
+        // }, 1000)
     });
 
 
