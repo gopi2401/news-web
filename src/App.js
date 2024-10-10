@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Category from './pages/Category';
 import SearchResults from './pages/SearchResults';
 import LoadingUI from './components/LoadingUI';
-import { DataContext } from './utils/data';
 import Footer from './components/footer';
 import Message from './components/message';
 
