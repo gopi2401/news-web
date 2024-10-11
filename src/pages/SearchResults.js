@@ -17,6 +17,8 @@ function SearchResults() {
                     `https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.REACT_APP_API_KEY}`,
                     {
                         headers: {
+                            "origin": "http://localhost:3000/",
+                            "referer": "http://localhost:3000/",
                             "sec-fetch-site": null
                         }
                     }

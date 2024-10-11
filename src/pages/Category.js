@@ -15,8 +15,10 @@ function Category() {
         loading.setLoading(true);
         const response = await fetch(`https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${process.env.REACT_APP_API_KEY}`, {
           headers: {
+            "origin": "http://localhost:3000/",
+            "referer": "http://localhost:3000/",
             "sec-fetch-site": null
-          }
+        }
         });
         const data = await response.json();
         if (data.status === 'error') { MsgLoad.setMsg({ load: true, message: data.message }) } else {
