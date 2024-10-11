@@ -14,7 +14,12 @@ function SearchResults() {
             try {
                 loading.setLoading(true);
                 const response = await fetch(
-                    `https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.REACT_APP_API_KEY}`
+                    `https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.REACT_APP_API_KEY}`,
+                    {
+                        headers: {
+                            "sec-fetch-site": null
+                        }
+                    }
                 );
                 const data = await response.json();
                 if (data.status === 'error') {
@@ -32,12 +37,13 @@ function SearchResults() {
         };
 
         fetchSearchResults();
-    }, [query, MsgLoad, loading]);
+        // eslint-disable-next-line
+    }, []);
 
     return (
         <div className='w-full flex flex-col items-center min-h-[calc(100vh-300px)]'>
             <h1 className='text-center font-bold text-2xl my-5 h-10'>Search Results for "{query}"</h1>
-            <div className='flex-auto flex justify-center items-center '>
+            <div className='flex-auto flex justify-center items-center w-full'>
                 {!loading.loading ? (articles && articles.length > 0 ? (
                     <Pagination articles={articles} ></Pagination>
                 ) : (

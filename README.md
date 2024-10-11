@@ -1,4 +1,10 @@
+![newsweb](https://github.com/user-attachments/assets/b643d344-3c75-460b-908b-23403f2df46d)
+
 # News Website
+
+[![made-with-flutter](https://img.shields.io/badge/Made%20with-React-blue)](https://react.dev/) ![Release](https://img.shields.io/github/v/release/gopi2401/news-web) ![Downloads](https://img.shields.io/github/downloads/gopi2401/news-web/total) ![GitHub issues](https://img.shields.io/github/issues/gopi2401/news-web) ![visitors](https://visitor-badge.laobi.icu/badge?page_id=gopi2401.news-web)
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/gopi2401/news-web) ![GitHub repo size](https://img.shields.io/github/repo-size/gopi2401/news-web?style=flat)
 
 ## Introduction
 
