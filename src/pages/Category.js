@@ -18,7 +18,7 @@ function Category() {
             "origin": "http://localhost:3000/",
             "referer": "http://localhost:3000/",
             "sec-fetch-site": null
-        }
+          }
         });
         const data = await response.json();
         if (data.status === 'error') { MsgLoad.setMsg({ load: true, message: data.message }) } else {
