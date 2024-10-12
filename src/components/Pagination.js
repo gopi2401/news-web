@@ -18,12 +18,15 @@ const Pagination = ({ articles }) => {
       let start = (pageNumber - 1) * itemsPerPage
       let end = start + itemsPerPage;
       setCurrentPageItems(articles.slice(start, end));
+      document.getElementById('newstop').scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
 
   return (
     <>
-      <div className='flex flex-col items-center'>
+      <div id='newstop' className='flex flex-col items-center'>
         <NewsList list={currentPageItems}></NewsList>
         <nav className="inline-flex items-center p-1 my-5 rounded bg-white space-x-2">
           <button onClick={() => handlePagination(-(currentPage - 1))} className="px-2 py-1 rounded border text-gray-500 bg-white hover:text-white hover:bg-blue-600 hover:border-blue-600">
