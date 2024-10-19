@@ -13,16 +13,10 @@ function Category() {
     const fetchCategoryNews = async () => {
       try {
         loading.setLoading(true);
-        const response = await fetch(`https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${process.env.REACT_APP_API_KEY}`, {
-          headers: {
-            "origin": "http://localhost:3000/",
-            "referer": "http://localhost:3000/",
-            "sec-fetch-site": null
-          }
-        });
-        const data = await response.json();
-        if (data.status === 'error') { MsgLoad.setMsg({ load: true, message: data.message }) } else {
-          setArticles(data.articles.filter(
+        const response = await fetch(`https://backend-ltdowr3f6-gopi2401s-projects.vercel.app/api/top-headlines?category=${category}&apikey=${process.env.REACT_APP_API_KEY}`);
+        const responsedata = await response.json();
+        if (responsedata.status === 'failed') { MsgLoad.setMsg({ load: true, message: responsedata.msg }) } else {
+          setArticles(responsedata.data.articles.filter(
             (item) => item.title !== "[Removed]"
           ));
         }

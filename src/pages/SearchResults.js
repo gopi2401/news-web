@@ -14,7 +14,7 @@ function SearchResults() {
             try {
                 loading.setLoading(true);
                 const response = await fetch(
-                    `https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.REACT_APP_API_KEY}`,
+                    `https://backend-ltdowr3f6-gopi2401s-projects.vercel.app/api/everything?q=${query}&apiKey=${process.env.REACT_APP_API_KEY}`,
                     {
                         headers: {
                             "origin": "http://localhost:3000/",
@@ -23,11 +23,11 @@ function SearchResults() {
                         }
                     }
                 );
-                const data = await response.json();
-                if (data.status === 'error') {
-                    MsgLoad.setMsg({ load: true, message: data.message })
+                const responsedata = await response.json();
+                if (responsedata.status === 'failed') {
+                    MsgLoad.setMsg({ load: true, message: responsedata.msg })
                 } else {
-                    setArticles(data.articles.filter(
+                    setArticles(responsedata.data.articles.filter(
                         (item) => item.title !== "[Removed]"
                     ));
                 }
