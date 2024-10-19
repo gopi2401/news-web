@@ -14,7 +14,7 @@ function SearchResults() {
             try {
                 loading.setLoading(true);
                 const response = await fetch(
-                    `https://backend-ltdowr3f6-gopi2401s-projects.vercel.app/api/everything?q=${query}&apiKey=${process.env.REACT_APP_API_KEY}`,
+                    `https://backend-jzbqb4uqk-gopi2401s-projects.vercel.app/api/everything?q=${query}&apiKey=${process.env.REACT_APP_API_KEY}`,
                     {
                         headers: {
                             "origin": "http://localhost:3000/",

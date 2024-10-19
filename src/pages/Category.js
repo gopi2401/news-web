@@ -13,7 +13,7 @@ function Category() {
     const fetchCategoryNews = async () => {
       try {
         loading.setLoading(true);
-        const response = await fetch(`https://backend-ltdowr3f6-gopi2401s-projects.vercel.app/api/top-headlines?category=${category}&apikey=${process.env.REACT_APP_API_KEY}`);
+        const response = await fetch(`https://backend-jzbqb4uqk-gopi2401s-projects.vercel.app/api/top-headlines?category=${category}&apikey=${process.env.REACT_APP_API_KEY}`);
         const responsedata = await response.json();
         if (responsedata.status === 'failed') { MsgLoad.setMsg({ load: true, message: responsedata.msg }) } else {
           setArticles(responsedata.data.articles.filter(
